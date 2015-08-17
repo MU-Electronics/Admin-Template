@@ -13,7 +13,7 @@ This should make it easier to keep multiple applications up to date and enable q
 
 <pre>
  $ composer require "mu-electronics/admin-template:dev-master"
- $ composer require "illuminate/html~5.0"
+ $ composer require "illuminate/html:~5.0"
 </pre>
 
 
