@@ -1,16 +1,16 @@
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/bootstrap.min.js') }}"></script>
 
 <!-- chart js -->
-<script src="js/chartjs/chart.min.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/chartjs/chart.min.js') }}"></script>
 <!-- bootstrap progress js -->
-<script src="js/progressbar/bootstrap-progressbar.min.js"></script>
-<script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/progressbar/bootstrap-progressbar.min.js') }}"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/nicescroll/jquery.nicescroll.min.js') }}"></script>
 <!-- icheck -->
-<script src="js/icheck/icheck.min.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/icheck/icheck.min.js') }}"></script>
 
-<script src="js/custom.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/custom.js') }}"></script>
 
 <!-- moris js -->
-<script src="js/moris/raphael-min.js"></script>
-<script src="js/moris/morris.js"></script>
-<script src="js/moris/example.js"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/moris/raphael-min.js') }}"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/moris/morris.js') }}"></script>
+<script src="{{ URL::to('vendor/manchesterTemplate/js/moris/example.js') }}"></script>
