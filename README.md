@@ -43,10 +43,18 @@ Illuminate\Html\HtmlServiceProvider::class,
 
 **Add packages into Laravel's aliases array**
 
+*For < 5.1 into providers array*
+<pre>
+'Form'      => Illuminate\Html\FormFacade::class,
+'Html'      => Illuminate\Html\HtmlFacade::class,
+</pre>
+
+*For > 5.1 into providers array*
 <pre>
 'Form'      => 'Illuminate\Html\FormFacade',
 'Html'      => 'Illuminate\Html\HtmlFacade',
 </pre>
+
 
 
 **Run the below command to publish package files**
