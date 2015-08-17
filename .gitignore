@@ -1,0 +1,7 @@
+/nbproject
+/vendor
+/.idea
+/storage/database.sqlite
+.DS_Store
+Thumbs.db
+.env
