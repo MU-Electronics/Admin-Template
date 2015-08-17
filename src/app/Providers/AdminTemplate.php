@@ -48,7 +48,7 @@ class AdminTemplate extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../../../src/resources/views/login.blade.php' => base_path('resources/views/vendor/manchesterTemplate/login.blade.php'),
-            __DIR__.'/../../../src/resources/views/login.blade.php' => base_path('resources/views/vendor/manchesterTemplate/dashboard.blade.php'),
+            __DIR__.'/../../../src/resources/views/dashboard.blade.php' => base_path('resources/views/vendor/manchesterTemplate/dashboard.blade.php'),
             __DIR__.'/../../../src/resources/views/template.blade.php' => base_path('resources/views/vendor/manchesterTemplate/template.blade.php'),
             __DIR__.'/../../../src/resources/views/partials' => base_path('resources/views/vendor/manchesterTemplate/partials'),
             __DIR__.'/../../../src/resources/views/errors' => base_path('resources/views/vendor/manchesterTemplate/errors'),
