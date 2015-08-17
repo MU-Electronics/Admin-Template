@@ -9,11 +9,46 @@ This should make it easier to keep multiple applications up to date and enable q
 
 # Install and Use
 
-Publishing of views is currently not recommended due to any modifications being over written when an updated is pulled and re published.
+**Download the package**
 
-Referencing the template and login view via the laravel special method [ return view('manchesterTemplate::template'); ] is more appropriate.
+<pre>
+ $ composer require "mu-electronics/admin-template:dev-master"
+</pre>
 
-Although the public files will need publishing via [ php artisan MU-Electronics:admin-template --tag=public --force ]
+
+**Add the package to Laravel's service providers (config/app.php)**
+
+*For < 5.1*
+<pre>
+MUElectronics\adminTemplate\app\Providers\AdminTemplate::class,
+</pre>
+
+*For > 5.1*
+<pre>
+"MUElectronics\adminTemplate\app\Providers\AdminTemplate",
+</pre>
+
+
+**Run the below command to publish package files**
+
+<pre>
+php artisan vendor:publish --force
+</pre>
+
+
+
+# Usage
+
+@todo check this
+
+Taking a new install of laravel open up routes file and past in the below. Navigate to your laravel url and enjoy the template.
+
+<pre>
+    Route::get('/', function () {
+        return view('vendor.manchesterTemplate.dashboard');
+    });
+</pre>
+
 
 
 
