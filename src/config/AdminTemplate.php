@@ -6,7 +6,7 @@
      /**
       *  Configure template language locations
       */
-     'lang_service' => 'template.booking_system',
+     'lang_service' => 'manchesterTemplate::template.booking_system',
 
 
 
