@@ -1,5 +1,8 @@
-<!-- page content -->
-<div class="right_col" role="main">
+@extends('vendor.manchesterTemplate.template')
+
+
+@section('content')
+
     <div class="">
         <div class="page-title">
             <div class="title_left">
@@ -47,13 +50,4 @@
         </div>
     </div>
 
-    <!-- footer content -->
-    <footer>
-        <div class="">
-            <p class="pull-right">Electronics Section. |<span class="lead"> <img src="images/manchester/copyright.png"/> Chemistry, University of Manchester</span>                         </p>
-        </div>
-        <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
-
-</div>
+@stop

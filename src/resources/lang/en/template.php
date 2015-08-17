@@ -14,7 +14,7 @@ return [
 
     'control_panel'     =>      'Control Panel',
     'booking_system'    =>      'Machine Time Booking System',
-    'welcome_user'      =>      'Welcome :User to the,',
+    'welcome_user'      =>      'Welcome :user to the,',
     ''      =>      '',
     ''      =>      '',
     ''      =>      '',

@@ -15,7 +15,7 @@
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><img src="{{ URL::to('images/manchester/manchester-university-logo.png')  }}" style="width: 100%;"/></a>
+                    <a href="index.html" class="site_title"><img src="{{ URL::to('vendor/manchesterTemplate/images/manchester/manchester-university-logo.png')  }}" style="width: 100%;"/></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -141,8 +141,14 @@
         </div>
         <!-- /top navigation -->
 
+        <!-- page content -->
+        <div class="right_col" role="main">
 
-        @yield('content')
+            @yield('content')
+
+            @include('vendor.manchesterTemplate.partials.copyright')
+
+        </div>
 
         <!-- /page content -->
     </div>

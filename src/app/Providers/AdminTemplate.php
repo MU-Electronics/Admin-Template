@@ -34,7 +34,7 @@ class AdminTemplate extends ServiceProvider
      */
     public function publishLang()
     {
-        $this->loadTranslationsFrom(__DIR__.'/src/resources/lang', 'manchesterTemplate');
+        $this->loadTranslationsFrom(__DIR__.'/../../../src/resources/lang', 'manchesterTemplate');
     }
 
     /**
