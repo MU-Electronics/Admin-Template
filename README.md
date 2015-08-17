@@ -9,14 +9,15 @@ This should make it easier to keep multiple applications up to date and enable q
 
 # Install and Use
 
-**Download the package**
+**Download the packages**
 
 <pre>
  $ composer require "mu-electronics/admin-template:dev-master"
+ $ composer require "illuminate/html~5.0"
 </pre>
 
 
-**Add the package to Laravel's service providers (config/app.php)**
+**Add the template package to Laravel's service providers (config/app.php)**
 
 *For < 5.1*
 <pre>
@@ -26,6 +27,25 @@ MUElectronics\adminTemplate\app\Providers\AdminTemplate::class,
 *For > 5.1*
 <pre>
 "MUElectronics\adminTemplate\app\Providers\AdminTemplate",
+</pre>
+
+**Add Laravel's HTML/FORM package into Laravel's service providers (config/app.php)**
+
+*For < 5.1 into providers array*
+<pre>
+Illuminate\Html\HtmlServiceProvider::class,
+</pre>
+
+*For > 5.1 into providers array*
+<pre>
+"MUElectronics\adminTemplate\app\Providers\AdminTemplate",
+</pre>
+
+**Add packages into Laravel's aliases array**
+
+<pre>
+'Form'      => 'Illuminate\Html\FormFacade',
+'Html'      => 'Illuminate\Html\HtmlFacade',
 </pre>
 
 
