@@ -47,10 +47,10 @@ class AdminTemplate extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/src/resources/views', 'manchesterTemplate');
 
         $this->publishes([
-            __DIR__.'/src/resources/views/login.blade.php' => base_path('resources/views/vendor/manchesterTemplate/login.blade.php'),
-            __DIR__.'/src/resources/views/template.blade.php' => base_path('resources/views/vendor/manchesterTemplate/template.blade.php'),
-            __DIR__.'/src/resources/views/partials' => base_path('resources/views/vendor/manchesterTemplate/partials'),
-            __DIR__.'/src/resources/views/errors' => base_path('resources/views/vendor/manchesterTemplate/errors'),
+            __DIR__.'/../../../src/resources/views/login.blade.php' => base_path('resources/views/vendor/manchesterTemplate/login.blade.php'),
+            __DIR__.'/../../../src/resources/views/template.blade.php' => base_path('resources/views/vendor/manchesterTemplate/template.blade.php'),
+            __DIR__.'/../../../src/resources/views/partials' => base_path('resources/views/vendor/manchesterTemplate/partials'),
+            __DIR__.'/../../../src/resources/views/errors' => base_path('resources/views/vendor/manchesterTemplate/errors'),
         ]);
     }
 
@@ -62,7 +62,7 @@ class AdminTemplate extends ServiceProvider
     private function publishConfig()
     {
         $this->publishes([
-            __DIR__.'/src/config/admintemplate.php' => config_path('admintemplate.php'),
+            __DIR__.'/../../../src/config/admintemplate.php' => config_path('admintemplate.php'),
         ]);
     }
 
@@ -73,11 +73,11 @@ class AdminTemplate extends ServiceProvider
      */
     private function publishPublic()
     {
-       $this->publishes([
-            __DIR__.'/src/public/css' => public_path('vendor/manchesterTemplate'),
-            __DIR__.'/src/public/fonts' => public_path('vendor/manchesterTemplate'),
-            __DIR__.'/src/public/images' => public_path('vendor/manchesterTemplate'),
-            __DIR__.'/src/public/js' => public_path('vendor/manchesterTemplate'),
+        $this->publishes([
+            __DIR__.'/../../../src/public/css' => public_path('vendor/manchesterTemplate/css'),
+            __DIR__.'/../../../src/public/fonts' => public_path('vendor/manchesterTemplate/fonts'),
+            __DIR__.'/../../../src/public/images' => public_path('vendor/manchesterTemplate/images'),
+            __DIR__.'/../../../src/public/js' => public_path('vendor/manchesterTemplate/js'),
         ], 'public');
     }
 
