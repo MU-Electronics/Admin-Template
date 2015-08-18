@@ -8,24 +8,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ $title or trans('template::login.login') }}</title>
+    <title>{{ $title or trans('manchesterTemplate::login.login') }}</title>
 
     <!-- Bootstrap core CSS -->
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ URL::to('vendor/manchesterTemplate/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="{{ URL::to('vendor/manchesterTemplate/fonts/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('vendor/manchesterTemplate/css/animate.min.css') }}" rel="stylesheet">
 
     <!-- Custom styling plus plugins -->
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/icheck/flat/green.css" rel="stylesheet">
+    <link href="{{ URL::to('vendor/manchesterTemplate/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('vendor/manchesterTemplate/css/icheck/flat/green.css') }}" rel="stylesheet">
 
 
-    <script src="js/jquery.min.js"></script>
+    <script src="{{ URL::to('vendor/manchesterTemplate/js/jquery.min.js') }}"></script>
 
     <!--[if lt IE 9]>
-    <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+    <script src="{{ URL::to('vendor/manchesterTemplate/js/ie8-responsive-file-warning.js') }}"></script>
     <![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -45,31 +45,31 @@
     <div id="wrapper">
         <div id="login" class="animate form">
             <section class="login_content">
-                {!! Form::open(['action'=>$action, 'method'=>'post']) !!}
-                    <h1>Login Form</h1>
-                    <div>
-                        {!! Form::text('username', ['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
-                    </div>
-                    <div>
-                        {!! Form::password('password', ['required' => 'true', 'placeholder' => 'Password', 'class' => 'form-control']) !!}
-                    </div>
-                    <div>
-                        {!! Form::submit('Login', ['class' => 'btn btn-default submit']) !!}
-                    </div>
+                {!! Form::open(['url'=>$login, 'method'=>'post']) !!}
+                <h1>Login Form</h1>
+                <div>
+                    {!! Form::text('username', null,['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
+                </div>
+                <div>
+                    {!! Form::password('password', ['required' => 'true', 'placeholder' => 'Password', 'class' => 'form-control']) !!}
+                </div>
+                <div>
+                    {!! Form::submit('Login', ['class' => 'btn btn-default submit']) !!}
+                </div>
+                <div class="clearfix"></div>
+                <div class="separator">
+
+                    <p class="change_link">New to site?
+                        <a href="#toregister" class="to_register"> Create Account </a>
+                    </p>
                     <div class="clearfix"></div>
-                    <div class="separator">
+                    <br />
+                    <div>
+                        <h1><img src="{{ URL::to('vendor/manchesterTemplate/images/manchester/copyright.png') }}"/> Chemistry, University of Manchester</h1>
 
-                        <p class="change_link">New to site?
-                            <a href="#toregister" class="to_register"> Create Account </a>
-                        </p>
-                        <div class="clearfix"></div>
-                        <br />
-                        <div>
-                            <h1><img src="images/manchester/copyright.png"/> Chemistry, University of Manchester</h1>
-
-                            <p>©2015 All Rights Reserved. Electronics Section, Chemistry, The University of Manchester.</p>
-                        </div>
+                        <p>©2015 All Rights Reserved. Electronics Section, Chemistry, The University of Manchester.</p>
                     </div>
+                </div>
                 {!! Form::close() !!}
             </section>
             <!-- content -->
