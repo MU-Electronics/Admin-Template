@@ -48,7 +48,7 @@
                 {!! Form::open(['url'=>$login, 'method'=>'post']) !!}
                 <h1>Login Form</h1>
                 <div>
-                    {!! Form::text('username', null,['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
+                    {!! Form::text('email', null,['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
                 </div>
                 <div>
                     {!! Form::password('password', ['required' => 'true', 'placeholder' => 'Password', 'class' => 'form-control']) !!}
@@ -65,8 +65,8 @@
                     <div class="clearfix"></div>
                     <br />
                     <div>
-                        <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('admintemplate.copyright_string_short') }}</h1>
-
+                        <h1>
+                            @if(config('admintemplate.copyright_logo')) <img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/>@endif {{ config('admintemplate.copyright_string_short') }}</h1>
                         <p>{{ config('admintemplate.copyright_string') }}</p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 @if(config('admintemplate.show_registration_form'))
                     {!! Form::open(['url'=>$registration, 'method'=>'post']) !!}
                     <div>
-                        {!! Form::text('username', null,['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
+                        {!! Form::text('name', null,['required' => 'true', 'placeholder' => 'Username', 'class' => 'form-control']) !!}
                     </div>
                     <div>
                         {!! Form::text('email', null,['required' => 'true', 'placeholder' => 'Email address', 'class' => 'form-control']) !!}
@@ -109,7 +109,7 @@
                     <div class="clearfix"></div>
                     <br />
                     <div>
-                        <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('admintemplate.copyright_string_short') }}</h1>
+                        <h1>@if(config('admintemplate.copyright_logo')) <img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/>@endif {{ config('admintemplate.copyright_string_short') }}</h1>
 
                         <p>{{ config('admintemplate.copyright_string') }}</p>
                     </div>
