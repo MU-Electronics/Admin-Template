@@ -65,7 +65,7 @@
                     <div class="clearfix"></div>
                     <br />
                     <div>
-                        <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('AdminTemplate.copyright_string_short') }}</h1>
+                        <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('admintemplate.copyright_string_short') }}</h1>
 
                         <p>{{ config('admintemplate.copyright_string') }}</p>
                     </div>
@@ -95,20 +95,6 @@
                     <div>
                         {!! Form::submit('Register', ['class' => 'btn btn-default submit']) !!}
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="separator">
-
-                        <p class="change_link">New to site?
-                            <a href="#toregister" class="to_register"> Create Account </a>
-                        </p>
-                        <div class="clearfix"></div>
-                        <br />
-                        <div>
-                            <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('AdminTemplate.copyright_string_short') }}</h1>
-
-                            <p>{{ config('admintemplate.copyright_string') }}</p>
-                        </div>
-                    </div>
                     {!! Form::close() !!}
                 @else
                     <p>
@@ -118,6 +104,16 @@
                         <a href="#tologin" class="to_register"> Log in </a>
                     </p>
                 @endif
+                <div class="clearfix"></div>
+                <div class="separator">
+                    <div class="clearfix"></div>
+                    <br />
+                    <div>
+                        <h1><img src="{{ URL::to(config('admintemplate.copyright_logo')) }}"/> {{ config('admintemplate.copyright_string_short') }}</h1>
+
+                        <p>{{ config('admintemplate.copyright_string') }}</p>
+                    </div>
+                </div>
             </section>
             <!-- content -->
         </div>
